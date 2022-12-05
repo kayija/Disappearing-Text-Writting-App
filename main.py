@@ -6,7 +6,7 @@ words_list = []
 
 
 def get_text():
-    t_timer = 1 * 60
+    t_timer = 5 * 60
     count_down(t_timer)
     word_textarea.config(state="normal")
     # words = word_textarea.get("1.0", "end")
@@ -39,7 +39,7 @@ def count_down(count):
             word_textarea.delete("1.0", "end")
         else:
             words_list.append(words)
-        timer = window.after(1000, count_down, count - 1)
+        timer = window.after(5000, count_down, count - 5)
     else:
         word_textarea.config(state="disabled")
         words = word_textarea.get("1.0", "end")
